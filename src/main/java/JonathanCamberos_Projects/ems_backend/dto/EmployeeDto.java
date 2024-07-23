@@ -10,7 +10,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-//we use this to transfer the data between client and server
+// we use this to transfer the data between client and server
+// Dto --> Data Transfer Object
+//  design pattern used to transfer data between layers or different
+//  parts of the application
+
 
 public class EmployeeDto {
     private Long id;
