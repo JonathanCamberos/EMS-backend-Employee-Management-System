@@ -15,8 +15,8 @@ import java.util.List;
 public class EmployeeController {
     private EmployeeService employeeService;
 
-    //API with spring is easy, first we create a method
-    // then we connect the method to the API using spring anotations
+    //Controller connects all the CRUD requests to their
+    // corresponding functions via spring mapping
 
     // Build Add Employee REST API
     @PostMapping
