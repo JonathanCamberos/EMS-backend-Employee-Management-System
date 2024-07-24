@@ -40,4 +40,21 @@ public class EmployeeController {
         List<EmployeeDto> employees = employeeService.getAllEmployees();
         return ResponseEntity.ok(employees);
     }
+
+    @PutMapping("{id}")
+    //Build Update Employee REST API
+    // Path Variable will grab ID from url
+    // RequestBody will grab json from body of request
+    public ResponseEntity<EmployeeDto> updatedEmployee(@PathVariable("id") Long employeeId,
+                                                       @RequestBody EmployeeDto updatedEmployee){
+        EmployeeDto employeeDto = employeeService.updateEmployee(employeeId, updatedEmployee);
+        return ResponseEntity.ok(employeeDto);
+    }
+
+    @DeleteMapping("{id}")
+    //Build Delete Employee REST API
+    public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long employeeId){
+        employeeService.deleteEmployee(employeeId);
+        return ResponseEntity.ok("Employee deleted successfully!");
+    }
 }
