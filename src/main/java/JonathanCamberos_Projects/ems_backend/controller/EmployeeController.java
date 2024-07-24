@@ -15,7 +15,7 @@ import java.util.List;
 public class EmployeeController {
     private EmployeeService employeeService;
 
-    //API w/ springboot is easy, first we create a method
+    //API with spring is easy, first we create a method
     // then we connect the method to the API using spring anotations
 
     // Build Add Employee REST API
